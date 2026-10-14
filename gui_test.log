@@ -1,0 +1,32 @@
+2026-10-11 10:46:05.864 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+PASS Overview
+PASS Prediction page
+PASS Single classification form
+PASS Predict Random Forest
+PASS Predict AdaBoost
+PASS Predict Gradient Boosting
+PASS Predict Bagging
+PASS Predict MLP
+PASS Predict Logistic Regression
+PASS Predict KNN
+PASS Predict Gaussian Naive Bayes
+PASS Predict Decision Tree
+PASS Predict SVC
+PASS Ten-model comparison
+PASS After-tuning-only comparison
+PASS All ten new-dataset models
+PASS Part B tuning comparison
+PASS Diagnostics random_forest
+PASS Diagnostics adaboost
+PASS Diagnostics gradient_boosting
+PASS Diagnostics bagging
+PASS Diagnostics mlp
+PASS Cluster assignment kmeans
+PASS Cluster assignment agglomerative
+PASS Empty cluster filter
+PASS Clustering after tuning
+PASS Clustering before/after
+PASS Classification audit
+PASS Clustering audit
+PASS Project guide
+ALL GUI CHECKS PASSED

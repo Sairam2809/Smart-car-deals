@@ -1,0 +1,8 @@
+{
+  "slug": "random_forest",
+  "name": "Random Forest",
+  "stage": "Before tuning",
+  "model_file": "random_forest_before.joblib",
+  "cv_macro_f1": 0.8549557420459012,
+  "selection_basis": "Highest five-fold training CV macro F1; test metrics not used"
+}

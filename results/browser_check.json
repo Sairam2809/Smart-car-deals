@@ -1,0 +1,18 @@
+{
+  "browser_home_ready_seconds": 0.5883777619999933,
+  "page_errors": [],
+  "batch_upload_download_rows": 3,
+  "invalid_batch_rejected": true,
+  "environment": "Local Streamlit server; Chrome Headless Shell 131; Playwright 1.63; Linux; Python 3.12.14",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 1040
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "visual_inspection_passed": true
+}

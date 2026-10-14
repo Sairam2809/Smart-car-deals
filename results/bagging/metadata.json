@@ -1,0 +1,11 @@
+{
+  "best_parameters": {
+    "model__estimator__max_depth": null,
+    "model__max_samples": 0.8,
+    "model__n_estimators": 100
+  },
+  "selection_metric": "5-fold training CV macro F1",
+  "positive_class": "Automatic",
+  "warnings": [],
+  "test_used_for_tuning": false
+}

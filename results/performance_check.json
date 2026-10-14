@@ -1,0 +1,36 @@
+{
+  "method": "Isolated processes using Streamlit AppTest. Timer starts after the test framework import and ends after the first script run. Not total browser load time. One cold sample and three warm reruns per project.",
+  "old": {
+    "project": "smart_car_review2",
+    "first_app_execution_seconds": 2.6115835209998295,
+    "warm_reruns_seconds": [
+      0.057079327999872476,
+      0.054773074999957316,
+      0.05160243899990746
+    ],
+    "loaded_after_landing": {
+      "sklearn": true,
+      "matplotlib.pyplot": true,
+      "plotly.express": true,
+      "src.classification": true,
+      "src.clustering": true
+    }
+  },
+  "torquex": {
+    "project": "TORQUEX_Review2",
+    "first_app_execution_seconds": 0.13114272599977994,
+    "warm_reruns_seconds": [
+      0.03863862700018217,
+      0.03451312800007145,
+      0.04094094699985362
+    ],
+    "loaded_after_landing": {
+      "sklearn": false,
+      "matplotlib.pyplot": false,
+      "plotly.express": false,
+      "src.classification": false,
+      "src.clustering": false
+    }
+  },
+  "first_app_execution_reduction_percent": 94.97842114007624
+}

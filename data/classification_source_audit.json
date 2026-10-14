@@ -1,0 +1,42 @@
+{
+  "source_url": "https://www.kaggle.com/api/v1/datasets/download/adityadesai13/used-car-dataset-ford-and-mercedes",
+  "source_page": "https://www.kaggle.com/datasets/adityadesai13/used-car-dataset-ford-and-mercedes",
+  "source_archive_sha256": "1f1b849d2bf44d084cbc1306477cfec878d7b713dc38db93dcffbea86f9371f5",
+  "source_manufacturer_files": [
+    "audi.csv",
+    "bmw.csv",
+    "ford.csv",
+    "hyundi.csv",
+    "merc.csv",
+    "skoda.csv",
+    "toyota.csv",
+    "vauxhall.csv",
+    "vw.csv"
+  ],
+  "source_rows": 99187,
+  "binary_rows": 76501,
+  "valid_binary_rows": 76228,
+  "exact_duplicate_rows_removed": 1089,
+  "conflicting_feature_identical_rows_removed": 2,
+  "eligible_counts": {
+    "Manual": 55345,
+    "Automatic": 19792
+  },
+  "output_counts": {
+    "Automatic": 1250,
+    "Manual": 1250
+  },
+  "output_shape": [
+    2500,
+    10
+  ],
+  "output_duplicates_excluding_metadata": 0,
+  "output_duplicate_feature_rows_excluding_target": 0,
+  "missing_values": 0,
+  "seed": 42,
+  "sampling_with_replacement": false,
+  "synthetic_rows": 0,
+  "copied_extra_rows": 0,
+  "every_row_verified_against_source": true,
+  "csv_sha256": "30991c4c1d184215711d9cefbd4d5bd3344a10790347abcec96ac327df4ff43d"
+}

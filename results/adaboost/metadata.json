@@ -1,0 +1,10 @@
+{
+  "best_parameters": {
+    "model__learning_rate": 0.1,
+    "model__n_estimators": 200
+  },
+  "selection_metric": "5-fold training CV macro F1",
+  "positive_class": "Automatic",
+  "warnings": [],
+  "test_used_for_tuning": false
+}

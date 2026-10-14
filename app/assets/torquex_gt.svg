@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="430" viewBox="0 0 960 430" role="img" aria-label="Original red TORQUEX sports car illustration">
+<defs>
+<linearGradient id="paint" x1="0" y1="0" x2="0.25" y2="1"><stop stop-color="#ff7469"/><stop offset=".24" stop-color="#f33337"/><stop offset=".65" stop-color="#bd1225"/><stop offset="1" stop-color="#59091a"/></linearGradient>
+<linearGradient id="glass" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#738796"/><stop offset=".5" stop-color="#202833"/><stop offset="1" stop-color="#070b12"/></linearGradient>
+<radialGradient id="rim"><stop stop-color="#b2bdc5"/><stop offset=".25" stop-color="#3b414a"/><stop offset=".68" stop-color="#84909b"/><stop offset=".76" stop-color="#15181c"/><stop offset="1" stop-color="#08090d"/></radialGradient>
+<linearGradient id="shine" x1="0" x2="1"><stop stop-color="#fb7778"/><stop offset=".48" stop-color="#fff2e8"/><stop offset="1" stop-color="#bd1829"/></linearGradient>
+</defs>
+<g fill="none" stroke="#c72534" opacity=".18"><path d="M80 70h600l130 270H80Z"/><path d="M150 70 285 340M280 70l135 270M410 70l135 270M540 70l135 270M80 150h638M80 230h678"/></g>
+<text x="865" y="174" text-anchor="end" fill="#c72c37" opacity=".12" font-family="Arial,sans-serif" font-style="italic" font-weight="900" font-size="150">TX</text>
+<ellipse cx="493" cy="348" rx="374" ry="20" fill="#000" opacity=".6"/>
+<path d="M140 230 219 207 315 134Q354 111 463 119l134 76 166 20 74 46 23 47-20 26-57 10H164l-45-34 4-51Z" fill="url(#paint)" stroke="#fd6770" stroke-width="2"/>
+<path d="m229 203 101-62q42-17 121-11l104 66Z" fill="url(#glass)" stroke="#ff8a86" stroke-width="3"/>
+<path d="m395 128 8 72" stroke="#ae1d2e" stroke-width="9"/>
+<path d="m451 133 92 61-132 4-8-68Z" fill="#17202c"/>
+<path d="m241 198 99-60 42-3-97 63Z" fill="#aec1c9" opacity=".25"/>
+<path d="M146 237 534 212 744 232 805 259" fill="none" stroke="url(#shine)" stroke-width="5"/>
+<path d="m208 215 302-3 218 20-213 4Z" fill="#ff5960" opacity=".48"/>
+<path d="m485 217 23 66-32 38M374 213l-1 99" fill="none" stroke="#690d20" stroke-width="2"/>
+<path d="M132 282h104m118 12h262m165-16 64 5" fill="none" stroke="#6d091a" stroke-width="5"/>
+<path d="M181 327h565l-12 17H179Z" fill="#090d14"/>
+<path d="m370 316 234-11-31 21H360Z" fill="#4b0917"/>
+<path d="m645 249 113 8 53 23-135-8Z" fill="#0b121a" stroke="#ff6b70" stroke-width="2"/>
+<path d="m657 253 98 8 35 13-124-7" fill="none" stroke="#fff3d9" stroke-width="5"/>
+<path d="m774 290 67 9-15 23-59-6Z" fill="#11141c"/>
+<path d="m134 252 44-12-10 22-39 9Z" fill="#ffc4bb"/>
+<path d="m480 192 29 4 10 13-37 4-6-9Z" fill="#890a1e" stroke="#ff686d" stroke-width="2"/>
+<path d="M171 218v-26l-49 1v8l38 5v17" fill="#11151b"/>
+<path d="m110 190 111-7 3 10-115 8Z" fill="#252b33"/>
+<g transform="translate(276 313)"><circle r="69" fill="#0a0c10"/><circle r="60" fill="#252a31"/><circle r="54" fill="url(#rim)"/><circle r="36" fill="#12161c"/><path d="M-10-42 7-9 36-26 13 3 42 12 8 13 1 44-8 13-38 24-17-2-36-28-7-13Z" fill="#8997a3"/><circle r="12" fill="#424c57" stroke="#d3dae2" stroke-width="3"/><circle r="4" fill="#c22333"/><path d="M35-24q22 14 4 41" fill="none" stroke="#fa3649" stroke-width="7"/></g>
+<g transform="translate(687 309)"><circle r="72" fill="#090c10"/><circle r="63" fill="#252a31"/><circle r="57" fill="url(#rim)"/><circle r="38" fill="#12161c"/><path d="M-11-44 7-9 39-27 13 3 44 13 8 14 1 47-9 13-41 25-17-2-38-30-7-14Z" fill="#8997a3"/><circle r="13" fill="#424c57" stroke="#d3dae2" stroke-width="3"/><circle r="4" fill="#c22333"/><path d="M36-25q24 15 5 43" fill="none" stroke="#fa3649" stroke-width="7"/></g>
+<path d="M202 294q3-72 70-73 61 1 76 63m263 0q7-71 74-73 65 3 78 66" fill="none" stroke="#ff7777" stroke-width="3"/>
+<text x="409" y="271" fill="#fbe6e4" font-family="Arial,sans-serif" font-size="18" font-weight="900" font-style="italic" letter-spacing="2">TORQUEX</text>
+<path d="M65 370h703" stroke="#e53143" stroke-width="2"/>
+<path d="M791 370h71" stroke="#e53143" stroke-width="5"/>
+<text x="71" y="396" font-family="Arial,sans-serif" font-size="11" letter-spacing="4" fill="#9295a1">GT CONCEPT / TORQUEX MOTOR LAB</text>
+</svg>

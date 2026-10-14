@@ -1,0 +1,10 @@
+{
+  "classification_cars.csv": {
+    "bytes": 147235,
+    "sha256": "30991c4c1d184215711d9cefbd4d5bd3344a10790347abcec96ac327df4ff43d"
+  },
+  "used_cars.csv": {
+    "bytes": 607822,
+    "sha256": "6b05294c4b43ea3534a9e486a0ace482a4135608aa58426c6e7b0d5d1057ee49"
+  }
+}

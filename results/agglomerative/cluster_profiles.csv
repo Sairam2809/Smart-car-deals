@@ -1,0 +1,3 @@
+cluster,cars,median_price_usd,median_mileage_miles,median_age
+0,2427,38436.0,39192.0,7.0
+1,780,11500.0,112000.0,18.0
