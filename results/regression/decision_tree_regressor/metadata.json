@@ -1,0 +1,21 @@
+{
+  "slug": "decision_tree_regressor",
+  "name": "Decision Tree Regressor",
+  "family": "Tree-based",
+  "parameters": {
+    "max_depth": 20,
+    "min_samples_leaf": 5,
+    "random_state": 42
+  },
+  "fit_time_seconds": 0.19,
+  "test_metrics": {
+    "R2": 0.8984,
+    "RMSE": 276545.28,
+    "MAE": 119405.38
+  },
+  "cross_validation": {
+    "cv_r2_mean": 0.7875,
+    "cv_r2_std": 0.0633,
+    "folds": 5
+  }
+}

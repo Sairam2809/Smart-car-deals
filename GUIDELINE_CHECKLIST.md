@@ -4,6 +4,7 @@ Reference: `data/capstone_guidelines.pdf`, especially sections 3.2, 3.3, 4, 6 an
 
 | Requirement | Location / status |
 |---|---|
+| Five Part A classifiers | Separate notebooks 01–05: Logistic Regression, KNN, Gaussian Naive Bayes, Decision Tree, SVC |
 | Five Part B classifiers | Separate notebooks 06–10: Random Forest, AdaBoost, Gradient Boosting, Bagging with Decision Tree, MLP |
 | Same data across Part A and B | All ten are rerun on the new 2,500-row UK dataset and the same split. This changes the original Review 1 dataset; the instructor must accept that change. |
 | Final ten-model comparison | Notebook 13 and `results/ten_model_comparison.csv`; Part A baseline reruns and each Part B CV-selected version |
@@ -11,7 +12,7 @@ Reference: `data/capstone_guidelines.pdf`, especially sections 3.2, 3.3, 4, 6 an
 | After-tuning comparison | `results/after_tuning_comparison.csv`, notebook 13 and dedicated GUI view |
 | Improvement reported | Actual deltas in `results/tuning_deltas.csv`; no claim that every model improves |
 | Classification metrics | Accuracy, weighted precision/recall/F1, confusion matrices, ROC-AUC; extra macro F1, balanced accuracy, minority/class metrics and PR plots |
-| Final selection and justification | Five-fold training macro F1 rule, exported selection; team adds substantive interpretation |
+| Final selection and justification | CV-selected after-tuning Random Forest uses the highest five-fold training macro F1; an exact tie means the search retained baseline parameters. Bagging provides the documented positive tuning improvement; team adds substantive interpretation. |
 | K-Means and hierarchical clustering | Notebooks 11 and 12; original `used_cars.csv` retained |
 | Clustering metrics | Silhouette, Davies–Bouldin, Calinski–Harabasz before/after; separate CV/holdout metrics |
 | Elbow and dendrogram | K-Means elbow plus CV selection; hierarchical dendrogram with explicit sample/truncation labels |
@@ -19,7 +20,7 @@ Reference: `data/capstone_guidelines.pdf`, especially sections 3.2, 3.3, 4, 6 an
 | t-SNE | Included for both methods (the rubric asks for at least one) |
 | Cross-validation | Five-fold classification CV for all ten; five-fold clustering validation using explicit assignment rules |
 | Train-only fitting | Imputer/scaler/encoder fitted within each training fold; holdout not used for tuning |
-| Clean, executed notebooks | Eight individually executed notebooks with outputs retained; readable shared functions in src/ |
+| Clean, executed notebooks | Thirteen individually executed notebooks with outputs retained; all use one numbered seven-section format and readable shared functions in src/ |
 | EDA and cleaning | Shapes, types, missing values, duplicate checks, distributions, correlations, outlier checks, scatterplots |
 | Feature engineering | Fixed-year age and log price/distance; code is deterministic and documented |
 | Markdown observations | Prompts are provided; the team must write original observations under section 7.5 |
@@ -31,4 +32,4 @@ Reference: `data/capstone_guidelines.pdf`, especially sections 3.2, 3.3, 4, 6 an
 | AI attribution | README discloses code scaffolding assistance; original team analysis remains required. |
 
 Scope is Review 2. The earlier regression notebook was not supplied and is not recreated here.
-Separate model notebooks follow the user's requested organization; notebook 13 consolidates comparisons.
+Separate model notebooks 01–12 follow the user's requested organization; notebook 13 consolidates comparisons.

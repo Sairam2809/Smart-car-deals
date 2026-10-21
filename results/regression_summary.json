@@ -1,0 +1,131 @@
+{
+  "total_rows": 15411,
+  "train_rows": 12328,
+  "test_rows": 3083,
+  "currency": "INR (\u20b9)",
+  "target_variable": "selling_price",
+  "models_count": 10,
+  "best_model": {
+    "Slug": "random_forest_regressor",
+    "Model": "Random Forest Regressor",
+    "Family": "Ensemble (Bagging)",
+    "R2": 0.939,
+    "RMSE": 214278.06,
+    "MAE": 99006.9,
+    "CV_R2_mean": 0.8788,
+    "CV_R2_std": 0.0866,
+    "Fit_time_s": 2.46
+  },
+  "models": [
+    {
+      "Slug": "random_forest_regressor",
+      "Model": "Random Forest Regressor",
+      "Family": "Ensemble (Bagging)",
+      "R2": 0.939,
+      "RMSE": 214278.06,
+      "MAE": 99006.9,
+      "CV_R2_mean": 0.8788,
+      "CV_R2_std": 0.0866,
+      "Fit_time_s": 2.46
+    },
+    {
+      "Slug": "gradient_boosting_regressor",
+      "Model": "Gradient Boosting Regressor",
+      "Family": "Ensemble (Boosting)",
+      "R2": 0.9212,
+      "RMSE": 243536.67,
+      "MAE": 126845.09,
+      "CV_R2_mean": 0.8739,
+      "CV_R2_std": 0.0834,
+      "Fit_time_s": 6.62
+    },
+    {
+      "Slug": "knn_regressor",
+      "Model": "K-Nearest Neighbors Regressor",
+      "Family": "Instance-based",
+      "R2": 0.9209,
+      "RMSE": 244032.62,
+      "MAE": 102700.04,
+      "CV_R2_mean": 0.8396,
+      "CV_R2_std": 0.0951,
+      "Fit_time_s": 0.06
+    },
+    {
+      "Slug": "decision_tree_regressor",
+      "Model": "Decision Tree Regressor",
+      "Family": "Tree-based",
+      "R2": 0.8984,
+      "RMSE": 276545.28,
+      "MAE": 119405.38,
+      "CV_R2_mean": 0.7875,
+      "CV_R2_std": 0.0633,
+      "Fit_time_s": 0.19
+    },
+    {
+      "Slug": "linear_regression",
+      "Model": "Linear Regression",
+      "Family": "Linear / OLS",
+      "R2": 0.8002,
+      "RMSE": 387848.26,
+      "MAE": 177656.37,
+      "CV_R2_mean": 0.7176,
+      "CV_R2_std": 0.104,
+      "Fit_time_s": 0.25
+    },
+    {
+      "Slug": "ridge_regression",
+      "Model": "Ridge Regression",
+      "Family": "Regularized Linear (L2)",
+      "R2": 0.7955,
+      "RMSE": 392332.65,
+      "MAE": 185108.53,
+      "CV_R2_mean": 0.7221,
+      "CV_R2_std": 0.0977,
+      "Fit_time_s": 0.09
+    },
+    {
+      "Slug": "lasso_regression",
+      "Model": "Lasso Regression",
+      "Family": "Regularized Linear (L1)",
+      "R2": 0.7955,
+      "RMSE": 392324.1,
+      "MAE": 178759.33,
+      "CV_R2_mean": 0.7091,
+      "CV_R2_std": 0.1118,
+      "Fit_time_s": 15.71
+    },
+    {
+      "Slug": "elasticnet_regression",
+      "Model": "ElasticNet Regression",
+      "Family": "Regularized Linear (L1+L2)",
+      "R2": 0.7537,
+      "RMSE": 430595.5,
+      "MAE": 217122.42,
+      "CV_R2_mean": 0.7093,
+      "CV_R2_std": 0.0755,
+      "Fit_time_s": 19.23
+    },
+    {
+      "Slug": "polynomial_regression",
+      "Model": "Polynomial Regression (Degree 2)",
+      "Family": "Non-linear Expansion",
+      "R2": 0.4556,
+      "RMSE": 640190.25,
+      "MAE": 163982.9,
+      "CV_R2_mean": 0.8124,
+      "CV_R2_std": 0.0841,
+      "Fit_time_s": 0.12
+    },
+    {
+      "Slug": "svr",
+      "Model": "Support Vector Regressor",
+      "Family": "Kernel / Margin",
+      "R2": 0.4183,
+      "RMSE": 661744.54,
+      "MAE": 244804.63,
+      "CV_R2_mean": 0.4648,
+      "CV_R2_std": 0.0784,
+      "Fit_time_s": 0.08
+    }
+  ]
+}

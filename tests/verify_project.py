@@ -41,6 +41,10 @@ for _,row in allruns.iterrows():
     assert len(model.predict(custom))==2
 selected=json.loads((ROOT/'results/selected_model.json').read_text())
 assert np.isclose(selected['cv_macro_f1'],allruns.CV_macro_F1.max())
+assert selected['stage']=='After tuning'
+assert selected['model_file']==f"{selected['slug']}_after.joblib"
+selected_row=allruns[(allruns.Slug==selected['slug'])&(allruns.Stage==selected['stage'])]
+assert len(selected_row)==1 and np.isclose(selected_row.iloc[0].CV_macro_F1,selected['cv_macro_f1'])
 print('PASS classification: split isolation, 15 saved model metrics, fold identities, no resampling, unseen/missing inputs, CV-only selection')
 
 _,cdf,ctrain,ctest=cluster_data()
@@ -67,7 +71,7 @@ for kind in ['kmeans','agglomerative']:
 print('PASS clustering: disjoint split, saved labels, all before/after metrics, holdout assignments, five-fold searches, profile totals')
 
 notebooks=list((ROOT/'notebooks').glob('*.ipynb'))
-assert len(notebooks)==8
+assert len(notebooks)==13
 images=0
 for path in notebooks:
     nb=nbformat.read(path,as_version=4);nbformat.validate(nb)
@@ -80,7 +84,7 @@ for path in notebooks:
         images+=sum('image/png' in o.get('data',{}) for o in cell.outputs)
     assert counts==list(range(1,len(counts)+1)),path.name
 assert images>=30,images
-print('PASS notebooks: eight valid files, all code cells executed in order, no error outputs,',images,'embedded plots')
+print('PASS notebooks: thirteen valid files, all code cells executed in order, no error outputs,',images,'embedded plots')
 
 
 valid=test[RAW_FEATURES].head(5).copy()

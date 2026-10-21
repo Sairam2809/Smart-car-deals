@@ -1,0 +1,11 @@
+Slug,Model,Family,R2,RMSE,MAE,CV_R2_mean,CV_R2_std,Fit_time_s
+random_forest_regressor,Random Forest Regressor,Ensemble (Bagging),0.939,214278.06,99006.9,0.8788,0.0866,2.46
+gradient_boosting_regressor,Gradient Boosting Regressor,Ensemble (Boosting),0.9212,243536.67,126845.09,0.8739,0.0834,6.62
+knn_regressor,K-Nearest Neighbors Regressor,Instance-based,0.9209,244032.62,102700.04,0.8396,0.0951,0.06
+decision_tree_regressor,Decision Tree Regressor,Tree-based,0.8984,276545.28,119405.38,0.7875,0.0633,0.19
+linear_regression,Linear Regression,Linear / OLS,0.8002,387848.26,177656.37,0.7176,0.104,0.25
+ridge_regression,Ridge Regression,Regularized Linear (L2),0.7955,392332.65,185108.53,0.7221,0.0977,0.09
+lasso_regression,Lasso Regression,Regularized Linear (L1),0.7955,392324.1,178759.33,0.7091,0.1118,15.71
+elasticnet_regression,ElasticNet Regression,Regularized Linear (L1+L2),0.7537,430595.5,217122.42,0.7093,0.0755,19.23
+polynomial_regression,Polynomial Regression (Degree 2),Non-linear Expansion,0.4556,640190.25,163982.9,0.8124,0.0841,0.12
+svr,Support Vector Regressor,Kernel / Margin,0.4183,661744.54,244804.63,0.4648,0.0784,0.08

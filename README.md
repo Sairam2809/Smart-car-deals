@@ -23,7 +23,9 @@ python -m streamlit run app/app.py
 
 Use the pinned dependency versions, especially scikit-learn, with the supplied model files. Stop the server with Ctrl+C. If port 8501 is occupied, append `--server.port 8502` to the Streamlit command.
 
-## Datasets and task definition
+## Problem statement and datasets
+
+TORQUEX addresses three automotive machine-learning tasks: predicting vehicle prices with regression, predicting Manual versus Automatic transmission with classification, and discovering market segments with clustering.
 
 The new balanced dataset is used for **classification**. The original `used_cars.csv` is retained for **clustering**.
 
@@ -42,6 +44,11 @@ Clustering source: [the original project CSV](https://github.com/rohithtej2109/S
 
 | Notebook | Contents |
 |---|---|
+| `01_logistic_regression.ipynb` | Logistic Regression baseline, five-fold CV, metrics, confusion matrix, ROC/PR and coefficients |
+| `02_knn_classifier.ipynb` | KNN baseline, five-fold CV, metrics, confusion matrix and ROC/PR |
+| `03_gaussian_naive_bayes.ipynb` | Gaussian Naive Bayes baseline, five-fold CV, metrics, confusion matrix and ROC/PR |
+| `04_decision_tree_classifier.ipynb` | Decision Tree baseline, five-fold CV, metrics, confusion matrix, ROC/PR and importance |
+| `05_svc.ipynb` | SVC baseline, five-fold CV, metrics, confusion matrix and ROC/PR |
 | `06_random_forest.ipynb` | Random Forest baseline, tuning, metrics, confusion matrices, ROC/PR and importance |
 | `07_adaboost.ipynb` | AdaBoost baseline, tuning and comparisons |
 | `08_gradient_boosting.ipynb` | Gradient Boosting baseline, tuning and comparisons |
@@ -49,9 +56,9 @@ Clustering source: [the original project CSV](https://github.com/rohithtej2109/S
 | `10_mlp.ipynb` | MLP baseline, tuning and training-loss curves |
 | `11_kmeans.ipynb` | K-Means before/after, elbow, CV, metrics, PCA and t-SNE |
 | `12_agglomerative.ipynb` | Hierarchical clustering, linkage search, dendrogram, metrics, PCA and t-SNE |
-| `13_all_models_comparison.ipynb` | Part A baseline reruns, five-model tuning deltas, all-after-tuning and all-ten comparisons |
+| `13_all_models_comparison.ipynb` | Part A baseline results, five-model tuning deltas, all-after-tuning and all-ten comparisons |
 
-All eight notebooks contain executed outputs. The original five Part A classifiers—Logistic Regression, KNN, Gaussian Naive Bayes, Decision Tree and SVC—are rerun on the new dataset in notebook 13, so the ten-model comparison uses one shared split. The original Review 1 scores are not reused. Part A is not retuned here.
+All 13 notebooks contain executed outputs and follow the same numbered seven-section format. The original five Part A classifiers—Logistic Regression, KNN, Gaussian Naive Bayes, Decision Tree and SVC—are rerun in notebooks 01–05 on the new dataset and consolidated in notebook 13, so the ten-model comparison uses one shared split. The original Review 1 scores are not reused. Part A is not retuned here.
 
 The `models/` directory contains 15 classifier variants and four clustering variants. `src/` holds the actual fitting and plotting functions imported by the readable notebooks; submit it with the notebooks. Every notebook includes prompts for the team's own interpretation.
 
@@ -61,8 +68,7 @@ The `models/` directory contains 15 classifier variants and four clustering vari
 - **Predict transmission:** choose any classifier, submit one car, optionally compare its Part B baseline and tuned prediction, or upload a CSV and download all predictions. Use the included input template. Batch limit: 10,000 rows.
 - **Model comparisons:** five Part B before/after scores and deltas; a separate all-after-tuning view; consolidated ten-model table; model diagnostics and search results.
 - **Car clusters:** interactive PCA scatter, cluster profiles, filtered listing downloads, before/after and after-only comparisons, elbow/dendrogram/t-SNE, and new-car segment assignment.
-- **Data garage:** original records, source information, missing-value checks and dataset downloads.
-- **Review guide:** methodology and submission checklist.
+- **Evaluation metrics:** regression, classification and clustering metrics with per-model validation details and downloadable result tables.
 
 Prediction probabilities are uncalibrated model outputs. Inputs outside the training distribution can be unreliable. Changing the selected model does not retrain anything. For hierarchical clustering, new-car assignment uses the nearest training-cluster centroid; it is explicitly labelled as an approximation because the algorithm has no native predict method.
 
@@ -72,11 +78,17 @@ Classification uses a reproducible stratified 80:20 split with seed 42: 2,000 tr
 
 Five-fold stratified **training CV macro F1** chooses hyperparameters and the final classifier. Baseline settings are eligible in each Part B search. Consequently a tuned model can retain its baseline settings, and a better CV score can still give a lower held-out score. The test partition is used for final reporting, not parameter selection. The CV scores used in selection are not nested-CV estimates of generalization.
 
-Required classification results include accuracy, weighted precision/recall/F1, confusion matrices and ROC-AUC; macro F1, balanced accuracy, Automatic-class measures and PR curves are also provided. Automatic is the positive class for ROC/PR. All models share exactly the same training/test data. Random Forest is selected by training CV; its held-out accuracy is 86.8% and macro F1 is approximately 0.868. This is performance on the balanced sample, not a claim about all used cars.
+Required classification results include accuracy, weighted precision/recall/F1, confusion matrices and ROC-AUC; macro F1, balanced accuracy, Automatic-class measures and PR curves are also provided. Automatic is the positive class for ROC/PR. All models share exactly the same training/test data.
 
 Clustering retains the original seed-42 80:20 split (3,207 fit rows; 802 holdout rows), train-only imputation/scaling, and five-fold tuning. K-Means searches k=2–6. Hierarchical search compares k=2–6 with Ward, complete and average linkage. Validation uses native K-Means prediction or the explicitly documented hierarchical centroid proxy. Collapsed validation partitions are rejected. Silhouette, Davies–Bouldin and Calinski–Harabasz are reported separately for fitted and held-out partitions. Higher silhouette/CH and lower DB are better; no ground-truth cluster accuracy is claimed.
 
 PCA is for visualization only and uses the same fitted projection for each model's before/after figures. t-SNE uses a fixed 1,200-row sample. The hierarchical dendrogram uses a labelled 600-row sample and is truncated to 25 leaves; it is not a drawing of all 3,207 training observations. Silhouette computations use at most 2,000 observations where specified in the code.
+
+### Final model selection
+
+Random Forest is the final classifier because it has the highest five-fold training CV macro F1. Its hyperparameter search selected the baseline parameter configuration, so the before- and after-tuning scores are identical; exact CV ties are reported using the CV-selected **After tuning** artifact. The held-out accuracy is 86.8% and macro F1 is approximately 0.868. Test metrics never choose the winner.
+
+Hyperparameter tuning still produces a documented improvement: Bagging increases training CV macro F1 by approximately 0.0135, held-out macro F1 by 0.0200, and held-out ROC-AUC by approximately 0.0169. These results describe the balanced sample, not all used cars.
 
 ## Faster startup
 
@@ -127,7 +139,7 @@ they are not a promise that tuning improves every model. Fold-selected settings 
 | --- | --- | --- | --- | --- | --- |
 | Random Forest | 0.8679 | 0.8679 | 0.0000 | 0.8550 | 0.8550 |
 | AdaBoost | 0.8138 | 0.8049 | -0.0089 | 0.8052 | 0.8099 |
-| Gradient Boosting | 0.8577 | 0.8577 | 0.0001 | 0.8319 | 0.8368 |
+| Gradient Boosting | 0.8577 | 0.8577 | 0.0001 | 0.8319 | 0.8373 |
 | Bagging | 0.8420 | 0.8620 | 0.0200 | 0.8354 | 0.8489 |
 | MLP | 0.8459 | 0.8459 | 0.0000 | 0.8449 | 0.8449 |
 

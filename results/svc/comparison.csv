@@ -1,0 +1,2 @@
+Slug,Model,Part,Stage,Accuracy,Precision_weighted,Recall_weighted,F1_weighted,F1_macro,Balanced_accuracy,Automatic_precision,Automatic_recall,ROC_AUC,Average_precision_Automatic,CV_macro_F1,CV_macro_F1_std
+svc,SVC,A rerun,Baseline,0.836,0.8391253794974485,0.836,0.8356212714093272,0.8356212714093271,0.8360000000000001,0.8716814159292036,0.788,0.9229120000000001,0.9327899482442282,0.8298077614840205,0.02113734646619658

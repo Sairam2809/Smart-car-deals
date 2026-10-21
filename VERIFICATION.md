@@ -1,11 +1,11 @@
 # TORQUEX verification report
 
-Verified on 11 October 2026 in a Linux environment with Python 3.12.14 and the pinned project dependencies. These are checks actually performed, not a guarantee that every operating-system or data scenario is covered.
+Core project and GUI checks were rerun on 21 October 2026 in the project Windows virtual environment with the pinned dependencies. Earlier browser and performance checks were completed in the preparation environment as described below. These are checks actually performed, not a guarantee that every operating-system or data scenario is covered.
 
 ## Executed experiments
 
-- All **8 notebooks / 43 code cells** executed successfully. Outputs are preserved in the delivered notebooks.
-- Notebook schemas validate; execution counts are ordered; no error outputs; **58 embedded plots**.
+- All **13 notebooks / 91 code cells** executed successfully. Outputs are preserved in the delivered notebooks.
+- Notebook schemas validate; execution counts are ordered; no error outputs; **90 embedded plots**.
 - Five Part B baseline/tuned experiments, five Part A baseline reruns, K-Means and hierarchical baseline/tuned experiments produced **19 saved model artifacts**.
 - Actual measured scores populate the comparisons. Tuning is not forced to improve held-out results; unchanged and negative deltas remain visible.
 - Execution used `scripts/execute_inprocess.py`, which runs real notebook code cells and captures their outputs. The alternative socket-based Jupyter runner is supplied but was not used for the delivered execution.
@@ -19,7 +19,7 @@ Verified on 11 October 2026 in a Linux environment with Python 3.12.14 and the p
 - Saved classifier predictions reproduce exported metrics for all **15 variants**.
 - Cross-validation fold identities match; preprocessing is inside the fitted pipelines; no resampling stage is present.
 - Classification handles unseen categorical values and missing predictor values through the fitted encoder/imputer.
-- Final model selection follows training CV scores, not held-out scores.
+- Final model selection follows training CV scores, not held-out scores; exact ties prefer the CV-selected after-tuning artifact.
 - Original clustering data hash matches the preceding package byte for byte.
 - Clustering partitions are disjoint; saved labels, all before/after metrics, holdout assignments, five-fold searches and cluster profile totals are consistent for all four variants.
 - CSV prediction validation covers correct schema, missing columns, empty or oversized datasets, nonnumeric/infinite values, invalid ranges, and batch/single prediction agreement.
@@ -31,14 +31,14 @@ See `verification.log` for the recorded test output. The source-row membership a
 
 `python tests/test_gui.py` exercises the actual Streamlit application through its AppTest interface:
 
-- Dashboard and prediction route.
+- Dashboard and classification prediction route.
 - Prediction submission with each of the ten classifiers.
 - Five Part B diagnostic views; before/after, all-after-tuning and consolidated ten-model comparisons.
 - K-Means and hierarchical new-car assignment.
 - Empty cluster filter handling and both clustering comparison views.
-- Classification/clustering data pages and review guide.
+- Complete evaluation-metrics page; the removed Data Garage route is absent from navigation.
 
-The final GUI test run passed after the batch-upload form change. See `gui_test.log`.
+The final GUI test run passed after synchronising the checks with the current navigation and removing the obsolete review-guide and Data Garage routes.
 
 ## Real browser checks — PASS
 

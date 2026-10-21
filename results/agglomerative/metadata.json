@@ -6,8 +6,8 @@
   "selection_metric": "5-fold validation silhouette on training pool only",
   "holdout_assignment": "nearest training-cluster centroid proxy, not native hierarchical prediction",
   "pca_variance_ratio": [
-    0.7571415184456246,
-    0.14310759453756927
+    0.7571415184456245,
+    0.14310759453756933
   ],
   "silhouette_sample_limit": 2000,
   "features": [

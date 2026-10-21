@@ -1,5 +1,5 @@
-2026-10-11 10:46:05.864 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
-PASS Overview
+PASS Dashboard
+PASS Data Garage removed
 PASS Prediction page
 PASS Single classification form
 PASS Predict Random Forest
@@ -26,7 +26,5 @@ PASS Cluster assignment agglomerative
 PASS Empty cluster filter
 PASS Clustering after tuning
 PASS Clustering before/after
-PASS Classification audit
-PASS Clustering audit
-PASS Project guide
+PASS Evaluation metrics
 ALL GUI CHECKS PASSED

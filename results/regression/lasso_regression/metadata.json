@@ -1,0 +1,21 @@
+{
+  "slug": "lasso_regression",
+  "name": "Lasso Regression",
+  "family": "Regularized Linear (L1)",
+  "parameters": {
+    "alpha": 10.0,
+    "max_iter": 300,
+    "tol": 0.01
+  },
+  "fit_time_seconds": 15.71,
+  "test_metrics": {
+    "R2": 0.7955,
+    "RMSE": 392324.1,
+    "MAE": 178759.33
+  },
+  "cross_validation": {
+    "cv_r2_mean": 0.7091,
+    "cv_r2_std": 0.1118,
+    "folds": 5
+  }
+}

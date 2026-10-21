@@ -1,8 +1,6 @@
 """Exercise the actual Streamlit script, navigation and prediction form submissions."""
 from pathlib import Path
 import sys
-import tempfile
-import pandas as pd
 from streamlit.testing.v1 import AppTest
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -14,9 +12,12 @@ def ok(at,label):
     print('PASS',label)
 
 at=AppTest.from_file(str(ROOT/'app/app.py'),default_timeout=90).run()
-ok(at,'Overview')
-at.sidebar.radio[0].set_value('Predict transmission').run()
+ok(at,'Dashboard')
+assert 'Data garage' not in at.sidebar.radio[0].options
+print('PASS Data Garage removed')
+at.sidebar.radio[0].set_value('Predict transmission (Classification)').run()
 ok(at,'Prediction page')
+assert at.selectbox(key='predict_stage_random_forest').value=='After tuning'
 at.button[0].click().run()
 ok(at,'Single classification form')
 assert any('Predicted transmission:' in s.value for s in at.success)
@@ -24,7 +25,7 @@ for name in ['Random Forest','AdaBoost','Gradient Boosting','Bagging','MLP','Log
     at.selectbox[0].set_value(name).run()
     at.button[0].click().run()
     ok(at,'Predict '+name)
-at.sidebar.radio[0].set_value('Model comparisons').run()
+at.sidebar.radio[0].set_value('Classification benchmarks').run()
 ok(at,'Ten-model comparison')
 at.radio(key='comparison_view').set_value('After tuning').run()
 ok(at,'After-tuning-only comparison')
@@ -44,7 +45,5 @@ at.radio(key='cluster_view').set_value('Segments').run()
 at.multiselect[0].set_value([]).run();ok(at,'Empty cluster filter')
 at.radio(key='cluster_view').set_value('After tuning').run();ok(at,'Clustering after tuning')
 at.radio(key='cluster_view').set_value('Before vs after').run();ok(at,'Clustering before/after')
-at.sidebar.radio[0].set_value('Data garage').run();ok(at,'Classification audit')
-at.radio(key='audit_dataset').set_value('Clustering · original').run();ok(at,'Clustering audit')
-at.sidebar.radio[0].set_value('Review guide').run();ok(at,'Project guide')
+at.sidebar.radio[0].set_value('Evaluation metrics').run();ok(at,'Evaluation metrics')
 print('ALL GUI CHECKS PASSED')

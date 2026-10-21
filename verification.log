@@ -1,6 +1,6 @@
 PASS classification: split isolation, 15 saved model metrics, fold identities, no resampling, unseen/missing inputs, CV-only selection
 PASS clustering: disjoint split, saved labels, all before/after metrics, holdout assignments, five-fold searches, profile totals
-PASS notebooks: eight valid files, all code cells executed in order, no error outputs, 58 embedded plots
+PASS notebooks: thirteen valid files, all code cells executed in order, no error outputs, 90 embedded plots
 PASS batch GUI backend: valid CSV rows, missing columns, empty/oversized CSV, bad numeric values, invalid ranges, batch/single prediction agreement
 PASS updated dataset, balanced split, after-tuning table and TORQUEX asset
 ALL PROJECT CHECKS PASSED

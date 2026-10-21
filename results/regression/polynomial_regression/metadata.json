@@ -1,0 +1,21 @@
+{
+  "slug": "polynomial_regression",
+  "name": "Polynomial Regression (Degree 2)",
+  "family": "Non-linear Expansion",
+  "parameters": {
+    "poly_degree": 2,
+    "alpha": 10.0,
+    "solver": "auto"
+  },
+  "fit_time_seconds": 0.12,
+  "test_metrics": {
+    "R2": 0.4556,
+    "RMSE": 640190.25,
+    "MAE": 163982.9
+  },
+  "cross_validation": {
+    "cv_r2_mean": 0.8124,
+    "cv_r2_std": 0.0841,
+    "folds": 5
+  }
+}

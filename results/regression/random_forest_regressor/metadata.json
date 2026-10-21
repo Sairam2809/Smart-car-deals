@@ -1,0 +1,21 @@
+{
+  "slug": "random_forest_regressor",
+  "name": "Random Forest Regressor",
+  "family": "Ensemble (Bagging)",
+  "parameters": {
+    "n_estimators": 100,
+    "max_depth": null,
+    "random_state": 42
+  },
+  "fit_time_seconds": 2.46,
+  "test_metrics": {
+    "R2": 0.939,
+    "RMSE": 214278.06,
+    "MAE": 99006.9
+  },
+  "cross_validation": {
+    "cv_r2_mean": 0.8788,
+    "cv_r2_std": 0.0866,
+    "folds": 5
+  }
+}

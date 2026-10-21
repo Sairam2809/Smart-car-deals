@@ -1,0 +1,6 @@
+{
+  "selection_metric": "Five-fold training CV macro F1 (evaluation only; no Part A tuning)",
+  "positive_class": "Automatic",
+  "warnings": [],
+  "test_used_for_tuning": false
+}

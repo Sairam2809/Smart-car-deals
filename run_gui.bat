@@ -6,3 +6,4 @@ if exist ".venv\Scripts\python.exe" (
     python -m streamlit run app/app.py
 )
 pause
+    
