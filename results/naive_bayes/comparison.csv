@@ -1,0 +1,2 @@
+Slug,Model,Part,Stage,Accuracy,Precision_weighted,Recall_weighted,F1_weighted,F1_macro,Balanced_accuracy,Automatic_precision,Automatic_recall,ROC_AUC,Average_precision_Automatic,CV_macro_F1,CV_macro_F1_std
+naive_bayes,Gaussian Naive Bayes,A rerun,Baseline,0.67,0.7807059258672161,0.67,0.6339044424031843,0.6339044424031843,0.6699999999999999,0.956989247311828,0.356,0.8448799999999999,0.8568993810200396,0.6770231639922046,0.02058641382077039

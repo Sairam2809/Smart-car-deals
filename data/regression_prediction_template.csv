@@ -1,0 +1,6 @@
+brand,model,vehicle_age,km_driven,seller_type,fuel_type,transmission_type,mileage,engine,max_power,seats
+Volvo,XC60,7,70252,Dealer,Diesel,Automatic,11.2,2400,215.0,5
+Tata,Tiago,2,10000,Individual,Petrol,Manual,23.84,1199,84.0,5
+Mercedes-Benz,CLS,2,6000,Dealer,Diesel,Automatic,19.0,1950,241.3,5
+Honda,City,7,63000,Dealer,Petrol,Manual,17.8,1497,117.3,5
+Hyundai,i10,10,80292,Dealer,Petrol,Manual,20.36,1197,78.9,5

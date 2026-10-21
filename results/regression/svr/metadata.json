@@ -1,0 +1,21 @@
+{
+  "slug": "svr",
+  "name": "Support Vector Regressor",
+  "family": "Kernel / Margin",
+  "parameters": {
+    "C": 100.0,
+    "epsilon": 0.1,
+    "kernel": "linear"
+  },
+  "fit_time_seconds": 0.08,
+  "test_metrics": {
+    "R2": 0.4183,
+    "RMSE": 661744.54,
+    "MAE": 244804.63
+  },
+  "cross_validation": {
+    "cv_r2_mean": 0.4648,
+    "cv_r2_std": 0.0784,
+    "folds": 5
+  }
+}

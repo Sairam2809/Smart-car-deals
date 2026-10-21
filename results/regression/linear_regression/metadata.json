@@ -1,0 +1,19 @@
+{
+  "slug": "linear_regression",
+  "name": "Linear Regression",
+  "family": "Linear / OLS",
+  "parameters": {
+    "fit_intercept": true
+  },
+  "fit_time_seconds": 0.25,
+  "test_metrics": {
+    "R2": 0.8002,
+    "RMSE": 387848.26,
+    "MAE": 177656.37
+  },
+  "cross_validation": {
+    "cv_r2_mean": 0.7176,
+    "cv_r2_std": 0.104,
+    "folds": 5
+  }
+}

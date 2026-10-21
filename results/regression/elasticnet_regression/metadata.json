@@ -1,0 +1,22 @@
+{
+  "slug": "elasticnet_regression",
+  "name": "ElasticNet Regression",
+  "family": "Regularized Linear (L1+L2)",
+  "parameters": {
+    "alpha": 0.01,
+    "l1_ratio": 0.8,
+    "max_iter": 300,
+    "tol": 0.01
+  },
+  "fit_time_seconds": 19.23,
+  "test_metrics": {
+    "R2": 0.7537,
+    "RMSE": 430595.5,
+    "MAE": 217122.42
+  },
+  "cross_validation": {
+    "cv_r2_mean": 0.7093,
+    "cv_r2_std": 0.0755,
+    "folds": 5
+  }
+}

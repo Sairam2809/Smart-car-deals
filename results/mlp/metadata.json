@@ -1,0 +1,13 @@
+{
+  "best_parameters": {
+    "model__activation": "relu",
+    "model__alpha": 0.0001,
+    "model__hidden_layer_sizes": [
+      100
+    ]
+  },
+  "selection_metric": "5-fold training CV macro F1",
+  "positive_class": "Automatic",
+  "warnings": [],
+  "test_used_for_tuning": false
+}

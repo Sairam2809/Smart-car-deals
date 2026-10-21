@@ -1,0 +1,18 @@
+{
+  "best_parameters": {
+    "k": 2,
+    "linkage": "ward"
+  },
+  "selection_metric": "5-fold validation silhouette on training pool only",
+  "holdout_assignment": "native KMeans.predict",
+  "pca_variance_ratio": [
+    0.7571415184456245,
+    0.14310759453756933
+  ],
+  "silhouette_sample_limit": 2000,
+  "features": [
+    "car_age",
+    "log_price",
+    "log_mileage"
+  ]
+}

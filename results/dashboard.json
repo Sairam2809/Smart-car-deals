@@ -1,0 +1,764 @@
+{
+  "title": "TORQUEX",
+  "classification_rows": 2500,
+  "classification_train": 2000,
+  "classification_test": 500,
+  "class_counts": {
+    "Automatic": 1250,
+    "Manual": 1250
+  },
+  "classification_currency": "GBP",
+  "classification_distance": "miles",
+  "oversampling": false,
+  "clustering_rows": 4009,
+  "regression_rows": 15411,
+  "regression_train": 12328,
+  "regression_test": 3083,
+  "regression_currency": "INR (\u20b9)",
+  "regression_best_model": {
+    "Slug": "random_forest_regressor",
+    "Model": "Random Forest Regressor",
+    "Family": "Ensemble (Bagging)",
+    "R2": 0.939,
+    "RMSE": 214278.06,
+    "MAE": 99006.9,
+    "CV_R2_mean": 0.8788,
+    "CV_R2_std": 0.0866,
+    "Fit_time_s": 2.46
+  },
+  "regression_models": [
+    {
+      "Slug": "random_forest_regressor",
+      "Model": "Random Forest Regressor",
+      "Family": "Ensemble (Bagging)",
+      "R2": 0.939,
+      "RMSE": 214278.06,
+      "MAE": 99006.9,
+      "CV_R2_mean": 0.8788,
+      "CV_R2_std": 0.0866,
+      "Fit_time_s": 2.46
+    },
+    {
+      "Slug": "gradient_boosting_regressor",
+      "Model": "Gradient Boosting Regressor",
+      "Family": "Ensemble (Boosting)",
+      "R2": 0.9212,
+      "RMSE": 243536.67,
+      "MAE": 126845.09,
+      "CV_R2_mean": 0.8739,
+      "CV_R2_std": 0.0834,
+      "Fit_time_s": 6.62
+    },
+    {
+      "Slug": "knn_regressor",
+      "Model": "K-Nearest Neighbors Regressor",
+      "Family": "Instance-based",
+      "R2": 0.9209,
+      "RMSE": 244032.62,
+      "MAE": 102700.04,
+      "CV_R2_mean": 0.8396,
+      "CV_R2_std": 0.0951,
+      "Fit_time_s": 0.06
+    },
+    {
+      "Slug": "decision_tree_regressor",
+      "Model": "Decision Tree Regressor",
+      "Family": "Tree-based",
+      "R2": 0.8984,
+      "RMSE": 276545.28,
+      "MAE": 119405.38,
+      "CV_R2_mean": 0.7875,
+      "CV_R2_std": 0.0633,
+      "Fit_time_s": 0.19
+    },
+    {
+      "Slug": "linear_regression",
+      "Model": "Linear Regression",
+      "Family": "Linear / OLS",
+      "R2": 0.8002,
+      "RMSE": 387848.26,
+      "MAE": 177656.37,
+      "CV_R2_mean": 0.7176,
+      "CV_R2_std": 0.104,
+      "Fit_time_s": 0.25
+    },
+    {
+      "Slug": "ridge_regression",
+      "Model": "Ridge Regression",
+      "Family": "Regularized Linear (L2)",
+      "R2": 0.7955,
+      "RMSE": 392332.65,
+      "MAE": 185108.53,
+      "CV_R2_mean": 0.7221,
+      "CV_R2_std": 0.0977,
+      "Fit_time_s": 0.09
+    },
+    {
+      "Slug": "lasso_regression",
+      "Model": "Lasso Regression",
+      "Family": "Regularized Linear (L1)",
+      "R2": 0.7955,
+      "RMSE": 392324.1,
+      "MAE": 178759.33,
+      "CV_R2_mean": 0.7091,
+      "CV_R2_std": 0.1118,
+      "Fit_time_s": 15.71
+    },
+    {
+      "Slug": "elasticnet_regression",
+      "Model": "ElasticNet Regression",
+      "Family": "Regularized Linear (L1+L2)",
+      "R2": 0.7537,
+      "RMSE": 430595.5,
+      "MAE": 217122.42,
+      "CV_R2_mean": 0.7093,
+      "CV_R2_std": 0.0755,
+      "Fit_time_s": 19.23
+    },
+    {
+      "Slug": "polynomial_regression",
+      "Model": "Polynomial Regression (Degree 2)",
+      "Family": "Non-linear Expansion",
+      "R2": 0.4556,
+      "RMSE": 640190.25,
+      "MAE": 163982.9,
+      "CV_R2_mean": 0.8124,
+      "CV_R2_std": 0.0841,
+      "Fit_time_s": 0.12
+    },
+    {
+      "Slug": "svr",
+      "Model": "Support Vector Regressor",
+      "Family": "Kernel / Margin",
+      "R2": 0.4183,
+      "RMSE": 661744.54,
+      "MAE": 244804.63,
+      "CV_R2_mean": 0.4648,
+      "CV_R2_std": 0.0784,
+      "Fit_time_s": 0.08
+    }
+  ],
+  "regression_inputs": {
+    "brands": [
+      "Audi",
+      "BMW",
+      "Bentley",
+      "Datsun",
+      "Ferrari",
+      "Force",
+      "Ford",
+      "Honda",
+      "Hyundai",
+      "ISUZU",
+      "Isuzu",
+      "Jaguar",
+      "Jeep",
+      "Kia",
+      "Land Rover",
+      "Lexus",
+      "MG",
+      "Mahindra",
+      "Maruti",
+      "Maserati",
+      "Mercedes-Benz",
+      "Mini",
+      "Nissan",
+      "Porsche",
+      "Renault",
+      "Rolls-Royce",
+      "Skoda",
+      "Tata",
+      "Toyota",
+      "Volkswagen",
+      "Volvo"
+    ],
+    "models_by_brand": {
+      "Audi": [
+        "A4",
+        "A6",
+        "A8",
+        "Q7"
+      ],
+      "BMW": [
+        "3",
+        "5",
+        "6",
+        "7",
+        "X1",
+        "X3",
+        "X4",
+        "X5",
+        "Z4"
+      ],
+      "Bentley": [
+        "Continental"
+      ],
+      "Datsun": [
+        "GO",
+        "RediGO",
+        "redi-GO"
+      ],
+      "Ferrari": [
+        "GTC4Lusso"
+      ],
+      "Force": [
+        "Gurkha"
+      ],
+      "Ford": [
+        "Aspire",
+        "Ecosport",
+        "Endeavour",
+        "Figo",
+        "Freestyle"
+      ],
+      "Honda": [
+        "Amaze",
+        "CR",
+        "CR-V",
+        "City",
+        "Civic",
+        "Jazz",
+        "WR-V"
+      ],
+      "Hyundai": [
+        "Aura",
+        "Creta",
+        "Elantra",
+        "Grand",
+        "Santro",
+        "Tucson",
+        "Venue",
+        "Verna",
+        "i10",
+        "i20"
+      ],
+      "ISUZU": [
+        "MUX"
+      ],
+      "Isuzu": [
+        "D-Max"
+      ],
+      "Jaguar": [
+        "F-PACE",
+        "XE",
+        "XF"
+      ],
+      "Jeep": [
+        "Compass",
+        "Wrangler"
+      ],
+      "Kia": [
+        "Carnival",
+        "Seltos"
+      ],
+      "Land Rover": [
+        "Rover"
+      ],
+      "Lexus": [
+        "ES",
+        "RX"
+      ],
+      "MG": [
+        "Hector"
+      ],
+      "Mahindra": [
+        "Alturas",
+        "Bolero",
+        "KUV",
+        "KUV100",
+        "Marazzo",
+        "Scorpio",
+        "Thar",
+        "XUV300",
+        "XUV500"
+      ],
+      "Maruti": [
+        "Alto",
+        "Baleno",
+        "Celerio",
+        "Ciaz",
+        "Dzire LXI",
+        "Dzire VXI",
+        "Dzire ZXI",
+        "Eeco",
+        "Ertiga",
+        "Ignis",
+        "S-Presso",
+        "Swift",
+        "Swift Dzire",
+        "Vitara",
+        "Wagon R",
+        "XL6"
+      ],
+      "Maserati": [
+        "Ghibli",
+        "Quattroporte"
+      ],
+      "Mercedes-Benz": [
+        "C-Class",
+        "CLS",
+        "E-Class",
+        "GL-Class",
+        "GLS",
+        "S-Class"
+      ],
+      "Mini": [
+        "Cooper"
+      ],
+      "Nissan": [
+        "Kicks",
+        "X-Trail"
+      ],
+      "Porsche": [
+        "Cayenne",
+        "Macan",
+        "Panamera"
+      ],
+      "Renault": [
+        "Duster",
+        "KWID",
+        "Triber"
+      ],
+      "Rolls-Royce": [
+        "Ghost"
+      ],
+      "Skoda": [
+        "Octavia",
+        "Rapid",
+        "Superb"
+      ],
+      "Tata": [
+        "Altroz",
+        "Harrier",
+        "Hexa",
+        "Nexon",
+        "Safari",
+        "Tiago",
+        "Tigor"
+      ],
+      "Toyota": [
+        "Camry",
+        "Fortuner",
+        "Glanza",
+        "Innova",
+        "Yaris"
+      ],
+      "Volkswagen": [
+        "Polo",
+        "Vento"
+      ],
+      "Volvo": [
+        "S90",
+        "XC",
+        "XC60",
+        "XC90"
+      ]
+    },
+    "seller_types": [
+      "Dealer",
+      "Individual",
+      "Trustmark Dealer"
+    ],
+    "fuel_types": [
+      "CNG",
+      "Diesel",
+      "Electric",
+      "LPG",
+      "Petrol"
+    ],
+    "transmissions": [
+      "Automatic",
+      "Manual"
+    ],
+    "seats": [
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "ranges": {
+      "vehicle_age": {
+        "min": 0,
+        "max": 29,
+        "default": 5
+      },
+      "km_driven": {
+        "min": 581,
+        "max": 1325000,
+        "default": 45000
+      },
+      "mileage": {
+        "min": 4.0,
+        "max": 33.5,
+        "default": 19.5
+      },
+      "engine": {
+        "min": 793,
+        "max": 6592,
+        "default": 1248
+      },
+      "max_power": {
+        "min": 38.4,
+        "max": 626.0,
+        "default": 83.0
+      }
+    }
+  },
+  "selection": {
+    "slug": "random_forest",
+    "name": "Random Forest",
+    "stage": "After tuning",
+    "model_file": "random_forest_after.joblib",
+    "cv_macro_f1": 0.8549557420459012,
+    "selection_basis": "Highest five-fold training CV macro F1; exact ties prefer the CV-selected after-tuning variant; test metrics not used"
+  },
+  "selected_test_metrics": {
+    "Slug": "random_forest",
+    "Model": "Random Forest",
+    "Part": "B",
+    "Stage": "After tuning",
+    "Accuracy": 0.868,
+    "Precision_weighted": 0.8691576784797124,
+    "Recall_weighted": 0.868,
+    "F1_weighted": 0.8678964308017485,
+    "F1_macro": 0.8678964308017485,
+    "Balanced_accuracy": 0.868,
+    "Automatic_precision": 0.8898305084745762,
+    "Automatic_recall": 0.84,
+    "ROC_AUC": 0.934712,
+    "Average_precision_Automatic": 0.9402793319536372,
+    "CV_macro_F1": 0.8549557420459012,
+    "CV_macro_F1_std": 0.0146739086856434
+  },
+  "after_tuning": [
+    {
+      "Slug": "random_forest",
+      "Model": "Random Forest",
+      "Part": "B",
+      "Stage": "After tuning",
+      "Accuracy": 0.868,
+      "Precision_weighted": 0.8691576784797124,
+      "Recall_weighted": 0.868,
+      "F1_weighted": 0.8678964308017485,
+      "F1_macro": 0.8678964308017485,
+      "Balanced_accuracy": 0.868,
+      "Automatic_precision": 0.8898305084745762,
+      "Automatic_recall": 0.84,
+      "ROC_AUC": 0.934712,
+      "Average_precision_Automatic": 0.9402793319536372,
+      "CV_macro_F1": 0.8549557420459012,
+      "CV_macro_F1_std": 0.0146739086856434
+    },
+    {
+      "Slug": "bagging",
+      "Model": "Bagging",
+      "Part": "B",
+      "Stage": "After tuning",
+      "Accuracy": 0.862,
+      "Precision_weighted": 0.8624697608100098,
+      "Recall_weighted": 0.862,
+      "F1_weighted": 0.8619552735086168,
+      "F1_macro": 0.8619552735086168,
+      "Balanced_accuracy": 0.862,
+      "Automatic_precision": 0.8755186721991701,
+      "Automatic_recall": 0.844,
+      "ROC_AUC": 0.933568,
+      "Average_precision_Automatic": 0.9343882363896236,
+      "CV_macro_F1": 0.8489223706213039,
+      "CV_macro_F1_std": 0.0258323403896625
+    },
+    {
+      "Slug": "mlp",
+      "Model": "MLP",
+      "Part": "B",
+      "Stage": "After tuning",
+      "Accuracy": 0.846,
+      "Precision_weighted": 0.8469381206783141,
+      "Recall_weighted": 0.846,
+      "F1_weighted": 0.8458958255780908,
+      "F1_macro": 0.8458958255780908,
+      "Balanced_accuracy": 0.846,
+      "Automatic_precision": 0.8649789029535865,
+      "Automatic_recall": 0.82,
+      "ROC_AUC": 0.927328,
+      "Average_precision_Automatic": 0.934351496882218,
+      "CV_macro_F1": 0.8449417550230475,
+      "CV_macro_F1_std": 0.0180478181047943
+    },
+    {
+      "Slug": "gradient_boosting",
+      "Model": "Gradient Boosting",
+      "Part": "B",
+      "Stage": "After tuning",
+      "Accuracy": 0.858,
+      "Precision_weighted": 0.8605439984530849,
+      "Recall_weighted": 0.858,
+      "F1_weighted": 0.8577490693583482,
+      "F1_macro": 0.857749069358348,
+      "Balanced_accuracy": 0.858,
+      "Automatic_precision": 0.8908296943231441,
+      "Automatic_recall": 0.816,
+      "ROC_AUC": 0.926688,
+      "Average_precision_Automatic": 0.9352797607824216,
+      "CV_macro_F1": 0.8373109380238356,
+      "CV_macro_F1_std": 0.0203344209235767
+    },
+    {
+      "Slug": "adaboost",
+      "Model": "AdaBoost",
+      "Part": "B",
+      "Stage": "After tuning",
+      "Accuracy": 0.806,
+      "Precision_weighted": 0.8128527261127743,
+      "Recall_weighted": 0.806,
+      "F1_weighted": 0.8049318065727926,
+      "F1_macro": 0.8049318065727926,
+      "Balanced_accuracy": 0.806,
+      "Automatic_precision": 0.8591549295774648,
+      "Automatic_recall": 0.732,
+      "ROC_AUC": 0.900464,
+      "Average_precision_Automatic": 0.9048256304478473,
+      "CV_macro_F1": 0.8098501100896813,
+      "CV_macro_F1_std": 0.0257490109188073
+    }
+  ],
+  "models": [
+    {
+      "Slug": "logistic_regression",
+      "Model": "Logistic Regression",
+      "Part": "A rerun"
+    },
+    {
+      "Slug": "knn",
+      "Model": "KNN",
+      "Part": "A rerun"
+    },
+    {
+      "Slug": "naive_bayes",
+      "Model": "Gaussian Naive Bayes",
+      "Part": "A rerun"
+    },
+    {
+      "Slug": "decision_tree",
+      "Model": "Decision Tree",
+      "Part": "A rerun"
+    },
+    {
+      "Slug": "svc",
+      "Model": "SVC",
+      "Part": "A rerun"
+    },
+    {
+      "Slug": "random_forest",
+      "Model": "Random Forest",
+      "Part": "B"
+    },
+    {
+      "Slug": "adaboost",
+      "Model": "AdaBoost",
+      "Part": "B"
+    },
+    {
+      "Slug": "gradient_boosting",
+      "Model": "Gradient Boosting",
+      "Part": "B"
+    },
+    {
+      "Slug": "bagging",
+      "Model": "Bagging",
+      "Part": "B"
+    },
+    {
+      "Slug": "mlp",
+      "Model": "MLP",
+      "Part": "B"
+    }
+  ],
+  "inputs": {
+    "brands": [
+      "Audi",
+      "BMW",
+      "Ford",
+      "Hyundai",
+      "Mercedes-Benz",
+      "Skoda",
+      "Toyota",
+      "Vauxhall",
+      "Volkswagen"
+    ],
+    "fuels": [
+      "Diesel",
+      "Hybrid",
+      "Other",
+      "Petrol"
+    ],
+    "models_by_brand": {
+      "Audi": [
+        "A1",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "Q2",
+        "Q3",
+        "Q5",
+        "Q7",
+        "Q8",
+        "R8",
+        "RS3",
+        "RS4",
+        "RS5",
+        "RS6",
+        "S4",
+        "S5",
+        "SQ7",
+        "TT"
+      ],
+      "BMW": [
+        "1 Series",
+        "2 Series",
+        "3 Series",
+        "4 Series",
+        "5 Series",
+        "6 Series",
+        "7 Series",
+        "M4",
+        "M5",
+        "X1",
+        "X2",
+        "X3",
+        "X4",
+        "X5",
+        "X6",
+        "X7",
+        "i3",
+        "i8"
+      ],
+      "Ford": [
+        "B-MAX",
+        "C-MAX",
+        "EcoSport",
+        "Edge",
+        "Fiesta",
+        "Focus",
+        "Galaxy",
+        "Grand C-MAX",
+        "Grand Tourneo Connect",
+        "KA",
+        "Ka+",
+        "Kuga",
+        "Mondeo",
+        "Mustang",
+        "Puma",
+        "S-MAX",
+        "Tourneo Custom"
+      ],
+      "Hyundai": [
+        "I10",
+        "I20",
+        "I30",
+        "I40",
+        "I800",
+        "IX20",
+        "IX35",
+        "Ioniq",
+        "Kona",
+        "Santa Fe",
+        "Tucson"
+      ],
+      "Mercedes-Benz": [
+        "A Class",
+        "B Class",
+        "C Class",
+        "CL Class",
+        "CLA Class",
+        "CLS Class",
+        "E Class",
+        "GL Class",
+        "GLA Class",
+        "GLC Class",
+        "GLE Class",
+        "GLS Class",
+        "M Class",
+        "S Class",
+        "SL CLASS",
+        "SLK",
+        "V Class",
+        "X-CLASS"
+      ],
+      "Skoda": [
+        "Citigo",
+        "Fabia",
+        "Kamiq",
+        "Karoq",
+        "Kodiaq",
+        "Octavia",
+        "Rapid",
+        "Scala",
+        "Superb",
+        "Yeti",
+        "Yeti Outdoor"
+      ],
+      "Toyota": [
+        "Auris",
+        "Avensis",
+        "Aygo",
+        "C-HR",
+        "Camry",
+        "Corolla",
+        "GT86",
+        "Hilux",
+        "Land Cruiser",
+        "PROACE VERSO",
+        "Prius",
+        "RAV4",
+        "Verso",
+        "Yaris"
+      ],
+      "Vauxhall": [
+        "Adam",
+        "Agila",
+        "Astra",
+        "Combo Life",
+        "Corsa",
+        "Crossland X",
+        "GTC",
+        "Grandland X",
+        "Insignia",
+        "Meriva",
+        "Mokka",
+        "Mokka X",
+        "Viva",
+        "Zafira",
+        "Zafira Tourer"
+      ],
+      "Volkswagen": [
+        "Amarok",
+        "Arteon",
+        "Beetle",
+        "CC",
+        "Caddy Maxi Life",
+        "Caravelle",
+        "Golf",
+        "Golf SV",
+        "Passat",
+        "Polo",
+        "Scirocco",
+        "Sharan",
+        "T-Cross",
+        "T-Roc",
+        "Tiguan",
+        "Touareg",
+        "Touran",
+        "Up"
+      ]
+    },
+    "year_min": 2001,
+    "year_max": 2020
+  }
+}

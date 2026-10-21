@@ -1,0 +1,20 @@
+{
+  "slug": "knn_regressor",
+  "name": "K-Nearest Neighbors Regressor",
+  "family": "Instance-based",
+  "parameters": {
+    "n_neighbors": 7,
+    "weights": "distance"
+  },
+  "fit_time_seconds": 0.06,
+  "test_metrics": {
+    "R2": 0.9209,
+    "RMSE": 244032.62,
+    "MAE": 102700.04
+  },
+  "cross_validation": {
+    "cv_r2_mean": 0.8396,
+    "cv_r2_std": 0.0951,
+    "folds": 5
+  }
+}

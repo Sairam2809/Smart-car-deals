@@ -1,0 +1,4 @@
+brand,model,year,price_gbp,mileage_miles,fuel_type,tax_gbp,mpg_uk,engine_size_l
+Audi,A3,2019,21374,7188,Diesel,145,51.4,1.6
+Volkswagen,T-Roc,2019,32990,8045,Petrol,145,32.5,2.0
+Toyota,Yaris,2015,11698,21076,Hybrid,0,78.0,1.5
