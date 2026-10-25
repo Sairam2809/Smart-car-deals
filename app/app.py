@@ -677,15 +677,18 @@ elif page == 'Predict transmission (Classification)':
 elif page == 'Classification benchmarks':
     heading('PERFORMANCE / CLASSIFIER BENCHMARK', 'Every change, measured.', 'Baseline, tuned and after-tuning comparisons from the 500-row held-out split. Automatic is the positive class.')
     mode = st.radio('Comparison view', ['Before vs after', 'After tuning', 'All ten models', 'Model diagnostics'], horizontal=True, key='comparison_view')
-    metric = st.selectbox(
-        'Score',
-        [
-            'F1_macro', 'F1_weighted', 'Accuracy', 'Precision_weighted', 'Recall_weighted',
-            'ROC_AUC', 'Average_precision_Automatic', 'Automatic_recall',
-            'Automatic_precision', 'Balanced_accuracy', 'CV_macro_F1', 'CV_macro_F1_std'
-        ],
-        key='comparison_metric'
-    )
+    metric = None
+    if mode != 'Model diagnostics':
+        metric = st.selectbox(
+            'Score',
+            [
+                'F1_macro', 'F1_weighted', 'Accuracy', 'Precision_weighted', 'Recall_weighted',
+                'ROC_AUC', 'Average_precision_Automatic', 'Automatic_recall',
+                'Automatic_precision', 'Balanced_accuracy', 'CV_macro_F1', 'CV_macro_F1_std'
+            ],
+            key='comparison_metric',
+            help='Selects the metric plotted in the benchmark chart below.'
+        )
 
     if mode == 'Before vs after':
         frame = table('results/part_b_before_after.csv')
